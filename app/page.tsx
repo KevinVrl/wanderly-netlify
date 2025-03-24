@@ -49,20 +49,21 @@ export default function WanderlyLanding() {
       {/* Itinerary Example */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold text-center mb-6">AI Itinerary Example</h2>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white shadow-xl rounded-2xl p-6"
-        >
-          <h3 className="text-xl font-bold mb-2">3 Days in Rome</h3>
-          <ul className="list-disc pl-6 text-left">
-            <li>Day 1: Colosseum, Palatine Hill, Trastevere</li>
-            <li>Day 2: Vatican Museums, sunset at Pincian Hill</li>
-            <li>Day 3: Local shopping and street food in Testaccio</li>
-          </ul>
-        </motion.div>
+	<motion.div
+	  initial={{ opacity: 0, y: 50 }}
+	  whileInView={{ opacity: 1, y: 0 }}
+	  transition={{ duration: 0.6 }}
+	  viewport={{ once: true }}
+	>
+	  <div className="bg-white shadow-xl rounded-2xl p-6">
+	    <h3 className="text-xl font-bold mb-2">3 Days in Rome</h3>
+	    <ul className="list-disc pl-6 text-left">
+	      <li>Day 1: Colosseum, Palatine Hill, Trastevere</li>
+	      <li>Day 2: Vatican Museums, sunset at Pincian Hill</li>
+	      <li>Day 3: Local shopping and street food in Testaccio</li>
+	    </ul>
+	  </div>
+	</motion.div>
       </section>
 
       {/* Testimonials */}
