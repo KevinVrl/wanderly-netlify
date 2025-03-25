@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* ✅ Logo */}
         <a href="#" className="flex items-center">
-        <img src="/images/logo.png" alt="Wanderly Logo" className="h-10 w-auto" />
+        <img src="/images/logo.png?v=2" alt="Wanderly Logo" className="h-20 w-auto" />
         </a>
 
         {/* ✅ Desktop Menu */}
