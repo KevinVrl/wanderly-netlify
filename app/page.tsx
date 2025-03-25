@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
 
 export default function WanderlyLanding() {
   useEffect(() => {
@@ -12,19 +13,34 @@ export default function WanderlyLanding() {
 
   return (
     <div className="bg-white text-gray-800 font-sans">
-      {/* Hero Section */}
-      <section className="min-h-screen bg-[url('/hero.jpg')] bg-cover bg-center flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-xl mb-4">
-          Your journey, tailored for you
-        </h1>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-xl">
-          Wanderly creates a custom itinerary powered by AI based on your preferences, dates, and travel style.
-        </p>
-        <div className="flex gap-4">
-          <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl">Download on the App Store</Button>
-          <Button className="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl">Get it on Google Play</Button>
-        </div>
-      </section>
+<Navbar /> {/* ✅ On affiche la navbar ici */}
+
+      {/* Hero Section avec fond image corrigé */}
+      <section
+  className="relative min-h-screen flex flex-col justify-center items-center text-center px-4"
+>
+  {/* ✅ Overlay sombre pour améliorer la lisibilité */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: "url('/images/hero.jpg?v=1')" }}
+  >
+    <div className="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+
+  {/* ✅ Texte et boutons bien centrés */}
+  <div className="relative z-10 flex flex-col items-center">
+    <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-xl mb-4">
+      Your journey, tailored for you.
+    </h1>
+    <p className="text-lg md:text-xl text-white mb-6 max-w-xl">
+      Wanderly creates a custom itinerary powered by AI based on your preferences, dates, and travel style.
+    </p>
+    <div className="flex flex-wrap justify-center gap-4">
+      <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl">Download on the App Store</Button>
+      <Button className="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl">Get it on Google Play</Button>
+    </div>
+  </div>
+</section>
 
       {/* Why Wanderly */}
       <section className="py-20 bg-gray-100 text-center">
@@ -49,21 +65,21 @@ export default function WanderlyLanding() {
       {/* Itinerary Example */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold text-center mb-6">AI Itinerary Example</h2>
-	<motion.div
-	  initial={{ opacity: 0, y: 50 }}
-	  whileInView={{ opacity: 1, y: 0 }}
-	  transition={{ duration: 0.6 }}
-	  viewport={{ once: true }}
-	>
-	  <div className="bg-white shadow-xl rounded-2xl p-6">
-	    <h3 className="text-xl font-bold mb-2">3 Days in Rome</h3>
-	    <ul className="list-disc pl-6 text-left">
-	      <li>Day 1: Colosseum, Palatine Hill, Trastevere</li>
-	      <li>Day 2: Vatican Museums, sunset at Pincian Hill</li>
-	      <li>Day 3: Local shopping and street food in Testaccio</li>
-	    </ul>
-	  </div>
-	</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-white shadow-xl rounded-2xl p-6">
+            <h3 className="text-xl font-bold mb-2">3 Days in Rome</h3>
+            <ul className="list-disc pl-6 text-left">
+              <li>Day 1: Colosseum, Palatine Hill, Trastevere</li>
+              <li>Day 2: Vatican Museums, sunset at Pincian Hill</li>
+              <li>Day 3: Local shopping and street food in Testaccio</li>
+            </ul>
+          </div>
+        </motion.div>
       </section>
 
       {/* Testimonials */}
