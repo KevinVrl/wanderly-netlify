@@ -35,9 +35,17 @@ export default function WanderlyLanding() {
     <p className="text-lg md:text-xl text-white mb-6 max-w-xl">
       Wanderly creates a custom itinerary powered by AI based on your preferences, dates, and travel style.
     </p>
-    <div className="flex flex-wrap justify-center gap-4">
-      <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl">Download on the App Store</Button>
-      <Button className="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl">Get it on Google Play</Button>
+    <div className="flex gap-4">
+      <a href="/coming-soon">
+        <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl">
+          Download on the App Store
+        </Button>
+      </a>
+      <a href="/coming-soon">
+        <Button className="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl">
+          Get it on Google Play
+        </Button>
+      </a>
     </div>
   </div>
 </section>
@@ -104,9 +112,17 @@ export default function WanderlyLanding() {
       <section className="py-20 text-center bg-blue-50">
         <h2 className="text-3xl font-semibold mb-4">Ready to travel stress-free?</h2>
         <p className="mb-6">Let Wanderly handle your planning.</p>
-        <div className="flex justify-center gap-4">
-          <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl">Download on the App Store</Button>
-          <Button className="bg-green-600 text-white px-6 py-3 rounded-xl">Get it on Google Play</Button>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a href="/coming-soon">
+            <Button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-xl w-full md:w-auto">
+              Download on the App Store
+            </Button>
+          </a>
+          <a href="/coming-soon">
+            <Button className="bg-green-600 text-white px-6 py-3 rounded-xl shadow-xl w-full md:w-auto">
+              Get it on Google Play
+            </Button>
+          </a>
         </div>
       </section>
     </div>
