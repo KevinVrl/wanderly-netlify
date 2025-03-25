@@ -1,4 +1,6 @@
+import "../app/globals.css";
 // app/layout.tsx
+
 export const metadata = {
   title: "Wanderly",
   description: "Your AI-powered travel planner",
