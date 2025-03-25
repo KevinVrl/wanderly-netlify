@@ -31,9 +31,9 @@ export default function ComingSoon() {
             required
             className="p-3 rounded-md border border-gray-300 focus:outline-none flex-grow"
           />
-          <Button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-md">
+          <button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-md w-full md:w-auto">
             Notify Me
-          </Button>
+          </button>
         </form>
       ) : (
         <p className="text-lg font-semibold mt-4">✅ Thank you! We'll notify you when Wanderly is available.</p>
