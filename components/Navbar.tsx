@@ -9,8 +9,8 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* ✅ Logo */}
-        <a href="#" className="text-2xl font-bold text-blue-600">
-          Wanderly
+        <a href="#" className="flex items-center">
+        <img src="/images/logo.png" alt="Wanderly Logo" className="h-10 w-auto" />
         </a>
 
         {/* ✅ Desktop Menu */}
