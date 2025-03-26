@@ -9,11 +9,11 @@ export default function AppPreview() {
       <p className="text-lg text-gray-600 mb-6 text-center">Check out our app on the App Store!</p>
 
       {/* Image avec une taille bien ajustée */}
-      <div className="w-full max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+      <div className="w-full max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         <img 
           src="/images/app-screenshot.jpg" 
           alt="Wanderly App Screenshot" 
-          className="w-full h-auto"
+          className="w-full h-auto object-cover"
         />
       </div>
 
