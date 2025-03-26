@@ -70,25 +70,64 @@ export default function WanderlyLanding() {
         </div>
       </section>
 
-      {/* Itinerary Example */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-6">AI Itinerary Example</h2>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h3 className="text-xl font-bold mb-2">3 Days in Rome</h3>
-            <ul className="list-disc pl-6 text-left">
-              <li>Day 1: Colosseum, Palatine Hill, Trastevere</li>
-              <li>Day 2: Vatican Museums, sunset at Pincian Hill</li>
-              <li>Day 3: Local shopping and street food in Testaccio</li>
-            </ul>
-          </div>
-        </motion.div>
+      {/* AI Itinerary Example */}
+      <section className="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-semibold text-gray-800 mb-6">🇮🇹 3 Days in Rome - AI Itinerary</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+          Personalized trip plan including flights, accommodation, key visits & meals.
+        </p>
+
+        {/* ✅ Timeline simplifiée */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              day: "Day 1 - Arrival & Landmarks",
+              events: [
+                "✈️ 10:00 AM - Land at Fiumicino Airport",
+                "🏨 11:30 AM - Check-in: Hotel de Russie / The RomeHello",
+                "🍝 12:30 PM - Carbonara at ‘Da Enzo al 29’",
+                "🏛️ 2:00 PM - Colosseum & Palatine Hill",
+                "☕️ 5:00 PM - Espresso at Tazza D’Oro",
+                "🌅 6:30 PM - Sunset at Piazza Venezia",
+              ],
+            },
+            {
+              day: "Day 2 - Vatican & Culture",
+              events: [
+                "🍳 8:00 AM - Breakfast at hotel",
+                "🎨 9:00 AM - Vatican Museums & Sistine Chapel",
+                "🍕 12:00 PM - Lunch at ‘Pizzarium’",
+                "⛪️ 2:00 PM - St. Peter’s Basilica",
+                "🛍️ 4:00 PM - Shopping at Via del Corso",
+                "🌆 6:30 PM - Pincio Terrace sunset view",
+              ],
+            },
+            {
+              day: "Day 3 - Local Experience",
+              events: [
+                "☕️ 7:30 AM - Espresso at Sant’Eustachio",
+                "🛶 8:30 AM - Walk along Tiber Island",
+                "🎭 10:00 AM - Explore Testaccio Market",
+                "🍝 12:00 PM - Lunch: Cacio e Pepe at ‘Flavio al Velavevodetto’",
+                "🚆 2:00 PM - Train to Fiumicino Airport",
+                "✈️ 5:00 PM - Flight back home",
+              ],
+            },
+          ].map((dayPlan, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-left">
+              <h3 className="text-xl font-bold text-blue-700 mb-4">{dayPlan.day}</h3>
+              <ul className="text-gray-800 space-y-2">
+                {dayPlan.events.map((event, i) => (
+                  <li key={i} className="flex items-center space-x-2">
+                    <span>{event}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
+
 
       {/* Testimonials */}
       <section id="testimonials" className="py-20 bg-gray-100 text-center px-6">
