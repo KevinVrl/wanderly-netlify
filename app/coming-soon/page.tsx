@@ -13,13 +13,16 @@ export default function ComingSoon() {
         Be the first to know when Wanderly launches! Enter your email below.
       </p>
 
-      {/* ✅ Formulaire Netlify */}
+      {/* ✅ Formulaire Netlify (Correction) */}
       <form 
         method="POST" 
         data-netlify="true"
         name="subscribe-form"
         className="bg-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4"
       >
+        {/* ✅ Champ caché obligatoire pour Netlify */}
+        <input type="hidden" name="form-name" value="subscribe-form" />
+
         <input 
           type="email" 
           name="email"
@@ -35,7 +38,7 @@ export default function ComingSoon() {
         </button>
       </form>
 
-      {/* ✅ Bouton Retour (Ajouté) */}
+      {/* ✅ Bouton Retour */}
       <Link href="/">
         <button className="mt-6 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700 transition">
           ← Back to Home
