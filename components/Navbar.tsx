@@ -1,17 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Ajoute un effet lorsque l'utilisateur fait défiler la page
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
-      setIsScrolled(window.scrollY > 50);
-    });
-  }
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all ${isScrolled ? "bg-white shadow-lg text-gray-800" : "bg-transparent text-white"} backdrop-blur-md`}>
@@ -22,14 +21,14 @@ export default function Navbar() {
           <img src="/images/logo.png?v=2" alt="Wanderly Logo" className="h-12 w-auto" />
         </Link>
 
-        {/* MENU CENTRÉ */}
+        {/* ✅ MENU CENTRÉ AVEC CONTACT */}
         <ul className="hidden md:flex space-x-8 font-semibold">
           <li><Link href="#features" className="hover:text-blue-400 transition">Features</Link></li>
           <li><Link href="#testimonials" className="hover:text-blue-400 transition">Testimonials</Link></li>
-          <li><Link href="#contact" className="hover:text-blue-400 transition">Contact</Link></li>
+          <li><Link href="/contact" className="hover:text-blue-400 transition">Contact</Link></li>
         </ul>
 
-        {/* ✅ Bouton App Preview UNIQUEMENT à droite */}
+        {/* ✅ Bouton App Preview toujours à droite */}
         <Link href="/app-preview">
           <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:scale-105 transition transform">
             🚀 App Preview
