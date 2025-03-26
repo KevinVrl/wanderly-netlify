@@ -153,6 +153,58 @@ export default function WanderlyLanding() {
           </a>
         </div>
       </section>
+      
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-300 py-12 mt-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+          {/* Colonne 1 : Logo + Slogan */}
+          <div>
+            <h2 className="text-2xl font-semibold text-white">Wanderly</h2>
+            <p className="mt-2 text-gray-400">Your journey, tailored for you.</p>
+          </div>
+
+          {/* Colonne 2 : Liens */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-lg font-semibold text-white">Company</h3>
+              <ul className="mt-2 space-y-2">
+                <li><a href="#" className="hover:text-blue-400 transition">About Us</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Careers</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Press</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Resources</h3>
+              <ul className="mt-2 space-y-2">
+                <li><a href="#" className="hover:text-blue-400 transition">Help Center</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Travel Tips</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Destination Guide</a></li>
+                <li><a href="#" className="hover:text-blue-400 transition">Community</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Colonne 3 : Contact */}
+          <div>
+            <h3 className="text-lg font-semibold text-white">Contact</h3>
+            <p className="mt-2 text-gray-400">Have questions or feedback? We'd love to hear from you.</p>
+            <p className="mt-2">
+              <a href="mailto:hello@wanderly.com" className="text-blue-400 hover:underline">hello@wanderly.com</a>
+            </p>
+          </div>
+        </div>
+
+        {/* Ligne séparatrice */}
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+          <p>© 2025 Wanderly. All rights reserved.</p>
+          <div className="mt-2 space-x-4">
+            <a href="#" className="hover:text-blue-400 transition">Privacy Policy</a>
+            <a href="#" className="hover:text-blue-400 transition">Terms of Service</a>
+            <a href="#" className="hover:text-blue-400 transition">Cookie Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
