@@ -91,22 +91,50 @@ export default function WanderlyLanding() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50 text-center px-6">
-        <h2 className="text-3xl font-semibold mb-10">Wanderly Travelers Love It</h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <section id="testimonials" className="py-20 bg-gray-100 text-center px-6">
+        <h2 className="text-3xl font-semibold mb-10 text-gray-800">Wanderly Travelers Love It</h2>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            "Wanderly saved me hours of planning!",
-            "Simple yet powerful. Loved my trip to Lisbon!",
-            "I travel last-minute a lot. This app is perfect for me!",
-          ].map((quote, index) => (
-            <Card key={index} className="p-4">
-              <CardContent>
-                <p className="italic">“{quote}”</p>
-              </CardContent>
-            </Card>
+            {
+              quote: "Wanderly saved me hours of planning!",
+              author: "Emma, Solo Traveler",
+              image: "/images/user1.jpg",
+            },
+            {
+              quote: "Simple yet powerful. Loved my trip to Lisbon!",
+              author: "Lucas, Adventure Seeker",
+              image: "/images/user2.jpg",
+            },
+            {
+              quote: "I travel last-minute a lot. This app is perfect for me!",
+              author: "Sophie, Business Traveler",
+              image: "/images/user3.jpg",
+            },
+          ].map((testimonial, index) => (
+            <div 
+              key={index} 
+              className="relative bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+            >
+              {/* Avatar Image */}
+              <div className="flex justify-center">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.author}
+                  className="w-16 h-16 rounded-full border-4 border-blue-600 shadow-md object-cover object-top"
+                />
+              </div>
+
+              {/* Quote */}
+              <p className="italic text-gray-700 text-lg mt-4">“{testimonial.quote}”</p>
+
+              {/* Author */}
+              <p className="font-semibold text-blue-600 mt-4">{testimonial.author}</p>
+            </div>
           ))}
         </div>
       </section>
+
 
       {/* Final Call to Action */}
       <section className="py-20 text-center bg-blue-50">
