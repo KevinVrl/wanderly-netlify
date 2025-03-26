@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* LOGO */}
         <Link href="/" className="flex items-center">
-          <img src="/images/logo.png?v=2" alt="Wanderly Logo" className="h-14 w-auto" />
+          <img src="/images/logo.png?v=2" alt="Wanderly Logo" className="h-12 w-auto" />
         </Link>
 
         {/* MENU */}
@@ -26,6 +26,7 @@ export default function Navbar() {
           <li><Link href="#features" className="hover:text-blue-300 transition">Features</Link></li>
           <li><Link href="#testimonials" className="hover:text-blue-300 transition">Testimonials</Link></li>
           <li><Link href="#contact" className="hover:text-blue-300 transition">Contact</Link></li>
+          <li><Link href="/app-preview" className="hover:text-blue-300 transition">App Preview</Link></li> {/* ✅ NOUVEAU LIEN */}
         </ul>
 
         {/* BOUTON DOWNLOAD */}
